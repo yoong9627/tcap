@@ -1,22 +1,24 @@
-
-<html>
-  <head>
-    <title>Google Auth Example App</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div>
-      <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-      <% end %>
-    </div>
-    <div>
-    <%= yield %>
-    </div>
-  </body>
+<head>
+    </head>
+    <body id="page">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+						<li><span>Image 04</span></li>
+						<li><span>Image 05</span></li>
+						<li><span>Image 06</span></li>
+        </ul>
+        <div class="container">
+                <p class = "mdtw"> Memory is the Diary
+                  <br>that we all carry about with us. </p>
+                <p class = "ow"> Oscar Wilde</h2>
+        </div>
+        <div class="container">
+          <% if current_user %>
+            <%= link_to "Go to Dashboard", main_timecapsule_path, :class => "button" %>
+          <% else %>
+            <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", :class => "button"%>
+          <% end %>
+      </body>
 </html>
