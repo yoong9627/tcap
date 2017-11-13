@@ -236,7 +236,6 @@ body{
 .button {
     z-index: 10;
     background-color: rgba(86, 82, 79, 0.5);
-    border: none;
     color: white;
     width: 220px;
     height: 45px;
@@ -258,7 +257,7 @@ body{
 .tbutton {
     z-index: 10;
     background-color: rgba(86, 82, 79, 0.5);
-    border: none;
+
     color: white;
     width: 220px;
     height: 45px;
@@ -466,7 +465,6 @@ body{
     background-color: rgba(9, 27, 66, 0.9);
     color: white;
   }
-
 
   /* The Close Button */
   .close {
