@@ -406,20 +406,23 @@ body{
   /* Modal Content/Box */
   .umodal-content {
     background-color: #fefefe;
-    margin: 9% auto; /* 15% from the top and centered */
+    margin: 9% auto;
+    margin-top: 3%;/* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-    height: 60%;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height: 85%;
   }
 
   /* Modal Content/Box */
   .tmodal-content {
       background-color: #fefefe;
-      margin: 15% auto; /* 15% from the top and centered */
+      margin: 9% auto; /* 15% from the top and centered */
+      margin-top: 3%;
       padding: 20px;
       border: 1px solid #888;
-      width: 80%; /* Could be more or less, depending on screen size */
+      width: 70%; /* Could be more or less, depending on screen size */
+      height: 85%;
   }
   .tmodal {
         display: none; /* Hidden by default */
@@ -433,6 +436,36 @@ body{
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
+  .usubmitbutton{
+    float: right;
+    height: 35px;
+    width: 80px;
+    color: black;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-style: solid;
+    border-color: #110110;
+    background-color: rgba(26, 45, 6, 0.15);
+  }
+  .usubmitbutton:hover {
+    background-color: rgba(26, 45, 6, 0.9);
+    color: white;
+  }
+  .tsubmitbutton {
+    float: right;
+    height: 35px;
+    width: 80px;
+    color: black;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-style: solid;
+    border-color: #110110;
+    background-color: rgba(9, 27, 66, 0.15);
+  }
+  .tsubmitbutton:hover {
+    background-color: rgba(9, 27, 66, 0.9);
+    color: white;
+  }
 
 
   /* The Close Button */
