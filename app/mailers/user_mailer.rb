@@ -11,12 +11,14 @@ class UserMailer < ApplicationMailer
       @diary = Userdiary.find(did)
       @d_title = @diary.title
       @d_body = @diary.body.html_safe
+      mail to: user.email, subject: "#{@d_title}"
     elsif @tid != 0
       @tcp = Timecap.find(tid)
       @t_title = @tcp.title
       @t_body = @tcp.body.html_safe
+      mail to: user.email, subject: "#{@t_title}"
     end
 
-    mail to: user.email, subject: "Test Email!"
+
   end
 end
