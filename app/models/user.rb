@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
-  has_many: userdiaries
-  has_many: timecaps
+  has_many :userdiaries
+  has_many :timecaps
 end

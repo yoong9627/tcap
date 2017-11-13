@@ -1,3 +1,3 @@
 class Userdiary < ActiveRecord::Base
-  belopngs_to: user
+  belongs_to :user
 end
