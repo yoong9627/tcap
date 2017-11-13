@@ -5,6 +5,7 @@ class TimecapsController < ApplicationController
   def create
     @timecap = Timecap.new(timecap_params)
     if @timecap.save
+      SendEmailWorker.perform_at(10.seconds.from_now, current_user.id, 0, @timecap.id)
       redirect_to root_path
     else
       render ation: "new"

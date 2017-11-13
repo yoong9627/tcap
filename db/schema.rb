@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20171112224205) do
+ActiveRecord::Schema.define(version: 20171112224744) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -27,21 +26,6 @@ ActiveRecord::Schema.define(version: 20171112224205) do
   end
 
   add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type"
-
-  create_table "timecaps", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.time     "wdate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "userdiaries", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -58,6 +42,21 @@ ActiveRecord::Schema.define(version: 20171112224205) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
+  create_table "timecaps", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.time     "wdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userdiaries", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"

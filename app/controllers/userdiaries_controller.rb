@@ -14,6 +14,7 @@ class UserdiariesController < ApplicationController
    def create
      @userdiary = Userdiary.new(userdiary_params)
      if @userdiary.save
+       SendEmailWorker.perform_at(10.seconds.from_now, current_user.id, @userdiary.id, 0)
        redirect_to root_path, notice: "The article has been successfully created."
      else
        render action: "new"
