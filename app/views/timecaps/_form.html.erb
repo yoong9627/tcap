@@ -1,0 +1,18 @@
+<%@timecap=Timecap.new%>
+<%= form_for @timecap do |f| %>
+<div>
+  <%= f.label :title %>
+</div>
+<div>
+  <%=f.text_field :title%>
+</div>
+<div>
+  <%=f.date_field :wdate%>
+</div>
+<div>
+  <%= f.cktext_area :body, rows: 10 %>
+</div>
+<div>
+  <%= f.submit %>
+</div>
+<% end %>

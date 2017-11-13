@@ -1,0 +1,12 @@
+<%@userdiary=Userdiary.new%>
+<%= form_for @userdiary do |f| %>
+  <div>
+    <%= f.text_field :title, :placeholder => " Title", :class => "textbox1" %>
+  </div>
+  <div style="margin-top: 5px">
+    <%= f.cktext_area :body, :class => "textbox2" %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

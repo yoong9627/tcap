@@ -1,3 +1,91 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+ margin:0;
+ padding:0;
+}
+html,body {
+ margin:0;
+ padding:0;
+}
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+fieldset,img {
+ border:0;
+}
+input{
+ border:1px solid #b0b0b0;
+ padding:3px 5px 4px;
+ color:#979797;
+ width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+ font-style:normal;
+ font-weight:normal;
+}
+ol,ul {
+ list-style:none;
+}
+caption,th {
+ text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+ font-size:100%;
+ font-weight:normal;
+}
+q:before,q:after {
+ content:'';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+ font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+ background: #000;
+ font-weight: 400;
+ font-size: 15px;
+ color: #aa3e03;
+ overflow-y: scroll;
+ overflow-x: hidden;
+}
+.ie7 body{
+ overflow:hidden;
+}
+.container{
+ position: relative;
+ text-align: center;
+}
+.clr{
+ clear: both;
+}
+.container > header{
+ padding: 30px 30px 10px 20px;
+ margin: 0px 20px 10px 20px;
+ position: relative;
+ display: block;
+ text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.container > header h1{
+ font-family: 'WItalic';
+ font-size: 35px;
+ line-height: 35px;
+ position: relative;
+ font-weight: 400;
+ color: #fff;
+ text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 0px 0px 5px 0px;
+}
+.container > header h1 span{
+
+}
+.container > header h2, p.info{
+ font-size: 16px;
+ font-style: italic;
+ color: #f8f8f8;
+ text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
 .cb-slideshow,
 .cb-slideshow:after {
     position: fixed;
@@ -167,6 +255,49 @@
 .button:hover{
   background-color: rgba(89, 20, 19, 0.9);
 }
+.tbutton {
+    z-index: 10;
+    background-color: rgba(86, 82, 79, 0.5);
+    border: none;
+    color: white;
+    width: 220px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Roboto;
+    line-height: 48px;
+    margin-top: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#281f11;
+    cursor: pointer;
+}
+.tbutton:hover{
+  background-color: rgba(9, 27, 66, 0.9);
+}.ubutton {
+    z-index: 10;
+    background-color: rgba(86, 82, 79, 0.5);
+    border: none;
+    color: white;
+    width: 220px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Roboto;
+    line-height: 48px;
+    margin-top: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#281f11;
+    cursor: pointer;
+}
+.ubutton:hover{
+  background-color: rgba(26, 45, 6, 0.9);
+}
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
     0% { opacity: 0;
@@ -259,4 +390,62 @@
 }
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
+  }
+  .umodal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 11; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content/Box */
+  .umodal-content {
+    background-color: #fefefe;
+    margin: 9% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 60%;
+  }
+
+  /* Modal Content/Box */
+  .tmodal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .tmodal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 11; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+
+  /* The Close Button */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
   }

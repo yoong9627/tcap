@@ -1,0 +1,2 @@
+module TimecapsHelper
+end
