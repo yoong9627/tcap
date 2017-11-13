@@ -23,8 +23,8 @@ Rails.application.configure do
     domain: "localhost:3000",
     authentication: "login",
     enable_starttls_auto: true,
-    user_name: "yongy0221@gmail.com",
-    password: "Dydqja123"
+    user_name: "email",
+    password: "password"
   }
 
   config.active_job.queue_adapter = :sidekiq

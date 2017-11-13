@@ -21,8 +21,8 @@ Rails.application.configure do
     domain: "tcp2-shy.herokuapp.com",
     authentication: "login",
     enable_starttls_auto: true,
-    user_name: "yongy0221@gmail.com",
-    password: "Dydqja123"
+    user_name: "email",
+    password: "password"
   }s
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
