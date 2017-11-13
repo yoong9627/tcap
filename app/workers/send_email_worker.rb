@@ -2,11 +2,9 @@ class SendEmailWorker
   include Sidekiq::Worker
   sidekiq_options retry: false
 
-  def perform(user_id)
-    puts user_id
+  def perform(user_id, did, tid)
     @user = User.find(user_id)
-    UserMailer.email(@user).deliver_now
+    UserMailer.email(@user, did, tid).deliver_now
     puts "Email successfully sent!!"
-    # puts @user.email
   end
 end
