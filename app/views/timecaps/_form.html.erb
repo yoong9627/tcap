@@ -1,13 +1,15 @@
 <%@timecap=Timecap.new%>
 <%= form_for @timecap do |f| %>
 <div>
-  <%= f.text_field :title, :placeholder => " Title", :class => "textbox2" %>
-  <text>Date to Reveal</text>  <%=f.date_field :wdate%>
+  <%= f.text_field :title, :placeholder => " Title", :class => "textbox1" %>
 </div>
-<div>
+<div style="margin-top:7px; margin-right:45%">
+    <text style = "font-size: 15px; color:black">Date to Reveal     :</text>  <%=f.datetime_select :wdate%>
+</div>
+<div style="margin-top:5px;">
   <%= f.cktext_area :body, rows: 10 %>
 </div>
 <div>
-  <%= f.submit %>
+  <%= f.submit "Bury", :class => "tsubmitbutton"%>
 </div>
 <% end %>
