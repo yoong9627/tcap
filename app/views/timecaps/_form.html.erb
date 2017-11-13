@@ -1,13 +1,8 @@
 <%@timecap=Timecap.new%>
 <%= form_for @timecap do |f| %>
 <div>
-  <%= f.label :title %>
-</div>
-<div>
-  <%=f.text_field :title%>
-</div>
-<div>
-  <%=f.date_field :wdate%>
+  <%= f.text_field :title, :placeholder => " Title", :class => "textbox2" %>
+  <text>Date to Reveal</text>  <%=f.date_field :wdate%>
 </div>
 <div>
   <%= f.cktext_area :body, rows: 10 %>
